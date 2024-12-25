@@ -1642,7 +1642,7 @@ local success, errorMessage = pcall(function()
 end)
 if not success then -- if the libary is down for any reason, ask user to report it on discord
     notify("quizbot error", "Failed to load UI libary. Please report this bug in the Discord server:", {
-        Callback = setclipboard("https://discord.gg/wm384KFFMC"),
+        Callback = setclipboard("https://discord.gg/zbANa8qZ"),
         Button1 = "Copy invite link"
     })
     warn("quizbot error [UI LIB] | " .. errorMessage)
@@ -1734,7 +1734,7 @@ mainTab:CreateButton({
     end
 })
 
-local leaderboardTab = window:CreateTab("Leaderborad", 97885193604839)
+local leaderboardTab = window:CreateTab("Leaderboard", 97885193604839)
 leaderboardTab:CreateSection("Server leaderboard (doesn't reset)")
 table.insert(leaderboardLabels.GlobalPoints, leaderboardTab:CreateLabel("🥇 [Empty] - 0"))
 table.insert(leaderboardLabels.GlobalPoints, leaderboardTab:CreateLabel("🥈 [Empty] - 0"))
@@ -1917,11 +1917,11 @@ playerControlTab:CreateButton({
 
 local settingsTab = window:CreateTab("Settings", 112502172419483)
 settingsTab:CreateSection("Discord server")
-settingsTab:CreateLabel("Join my Discord server: discord.gg/wm384KFFMC")
+settingsTab:CreateLabel("Join my Discord server: discord.gg/zbANa8qZ")
 settingsTab:CreateButton({
     Name = "Click this button to copy the invite link",
     Callback = function()
-        setclipboard("https://discord.gg/wm384KFFMC")
+        setclipboard("discord.gg/zbANa8qZ")
         notify("Successfully copied invite", "The invite link has been copied to your clipboard")
     end
 })
